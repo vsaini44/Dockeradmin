@@ -1,0 +1,80 @@
+ apt update
+     apt install docker.io -y
+    3  docker ps
+    4  docker ps -a
+    5  docker images
+    6  docker pull nginx
+    7  cd /var/lib/docker/
+    8  ls
+    9  cd image/
+   10  ls
+   11  cd overlay2/
+   12  ls
+   13  cd imagedb/
+   14  ls
+   15  cd content/
+   16  ls
+   17  cd sha256/
+   18  ls
+   19  docker images
+   20  ls
+   21  file f652ca386ed135a4cbe356333e08ef0816f81b2ac8d0619af01e2b256837ed3e
+   22  cat f652ca386ed135a4cbe356333e08ef0816f81b2ac8d0619af01e2b256837ed3e
+   23  cd
+   24  docker images
+   25  docker run -d --name=cont1 nginx
+   26  docker ps
+   27  docker exec -it cont1 /bin/bash
+   28  dokcer ps
+   29  docker ps
+   30  docker stop cont1
+   31  docker start cont1
+   32  docker exec -it cont1 /bin/bash
+   33  docker commit
+   34  docker commit cont1 mycustimage:latest
+   35  docker images
+   36  docker ps
+   37  docker rm -f cont1
+   38  docker ps -a
+   39  docker run -d --name=cont2 mycustimage
+   40  docker ps
+   41  docker exec -ti cont2 /bin/bash
+   42  docker ps
+   43  docker diff cont2
+   44  docker ps
+   45  docker exec -ti cont2 /bin/bash
+   46  docker diff cont2
+   47  docker exec -ti cont2 /bin/bash
+   48  docker diff cont2
+   49  docker images
+   50  docker ps -a
+   51  docker rm -f cont2
+   52  docker tag
+   53  docker tag mycustimage:latest img1:latest
+   54  docker images
+   55  alias d ='docker'
+   56  alias d='docker'
+   57  d images
+   58  cd /var/lib/docker/
+   59  cd
+   60  docker images
+   61  docker save mycustimage:latest  img1:latest  -o vishal.tar
+   62  ls
+   63  file vishal.tar
+   64  tar -tf vishal.tar
+   65  docker images
+   66  docker ps -a
+   67  ls
+   68  docker rmi mycustimage:latest img1:latest
+   69  docker images
+   70  ls
+   71  docker load -i vishal.tar
+   72  docker images
+   73  docker tag img1:latest vsaini44/18thDecimage:latest
+   74  docker tag img1:latest vsaini44/Dec18thimage:latest
+   75  docker tag img1:latest vsaini44/dec18thimage:latest
+   76  docker images
+   77  docker push vsaini44/dec18thimage
+   78  docker login
+   79  docker push vsaini44/dec18thimage
+   80  history
